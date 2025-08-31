@@ -13,11 +13,6 @@ To understand and perform evidence acquisition using FTK Imager by capturing bot
 ---
 
 ### Description
-> **Ex. No 1: Evidence Acquisition Using AccessData FTK Imager**
-
-**Date**:
-
-**Description**
 
 > Forensic Toolkit or FTK is a computer forensics software product made
 > by AccessData. This is a Windows based commercial product. For
