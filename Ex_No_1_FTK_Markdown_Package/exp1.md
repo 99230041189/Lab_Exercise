@@ -51,7 +51,7 @@ A dialog box will appear where you configure where and how the memory will be sa
 <br>
 <br>
 
-<img width="1089" height="733" alt="image" src="https://github.com/user-attachments/assets/063d0880-5649-46b7-aa7f-49d958acf63b" />
+![Image 1](Images/2.jpg)
 
  
 <br>
