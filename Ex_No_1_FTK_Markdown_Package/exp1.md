@@ -83,7 +83,7 @@ Acquiring volatile memory using FTK Imager
 > NOTE: Once the acquisition has completed, the destination folder will
 > have the acquired memory with the file extension of ".mem".
 >
-> Acquiring non-volatile memory (Disk Image) using FTK Imager
+Acquiring non-volatile memory (Disk Image) using FTK Imager
 >
 > As previously stated, this same tool can be used to collect a disk
 > image as well. Open FTK Imager and navigate to "Create Disk
