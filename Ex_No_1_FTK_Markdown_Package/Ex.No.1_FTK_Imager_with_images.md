@@ -34,7 +34,9 @@ Open FTK Imager and navigate to the volatile memory icon (capture memory).
 
 
 
+![Image 1](images/image_1.jpg)
 
+![Image 2](images/image_2.jpg)
 
 
 
@@ -137,10 +139,6 @@ Once acquiring is complete, it will create a text file including all the informa
 
 
 Hash values are matched. 
-
-![Image 1](images/image_1.jpg)
-
-![Image 2](images/image_2.jpg)
 
 ![Image 3](images/image_3.jpg)
 
