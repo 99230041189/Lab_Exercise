@@ -53,7 +53,7 @@ Acquiring volatile memory using FTK Imager
 > Open FTK Imager and navigate to the volatile memory icon (capture
 > memory).
 
-![](media/image3.jpg){width="4.358228346456693in" height="2.975in"}
+![](Screenshot 2025-08-31 153518.png){width="4.358228346456693in" height="2.975in"}
 
 > **NOTE:** This tool provides options to include pagefile and AD1 files
 > when acquiring the volatile memory.
