@@ -78,7 +78,7 @@ Acquiring volatile memory using FTK Imager
 > Clicking the "capture memory" button will start acquiring the volatile
 > memory.
 
-![Image 1](Images/1.jpg)
+![Image 1](Images/2.jpg)
 
 > NOTE: Once the acquisition has completed, the destination folder will
 > have the acquired memory with the file extension of ".mem".
@@ -87,12 +87,12 @@ Acquiring non-volatile memory (Disk Image) using FTK Imager
 >
 > As previously stated, this same tool can be used to collect a disk
 > image as well. Open FTK Imager and navigate to "Create Disk
-> Image".![Image 1](Images/1.jpg)
+> Image".![Image 1](Images/3.jpg)
 
 >
 > Now select the source that you need to acquire.
 
-![Image 1](Images/1.jpg)
+![Image 1](Images/4.jpg)
 
 
 > NOTE: FTK Imager is capable of acquiring physical drives (physical
