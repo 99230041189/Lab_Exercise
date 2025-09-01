@@ -166,7 +166,7 @@ A window will appear asking you to choose the source type:
   <br>
   
 <p align="center">
-<img width="1090" height="738" alt="image" src="https://github.com/user-attachments/assets/15e6e39a-3dec-44c7-a20d-e059c6dade7b" />
+<img src="Images/7.jpg">
 </p>
 <br>
 <br>
@@ -179,9 +179,9 @@ A window will appear asking you to choose the source type:
   <br>
   <br>
   <p align="center">
- <img width="1088" height="734" alt="image" src="https://github.com/user-attachments/assets/14975271-7978-410f-b4f4-f2a63c328048" />
+ <img src="Images/8.jpg">
 
-  <img width="1093" height="733" alt="image" src="https://github.com/user-attachments/assets/944f873f-a792-48ff-884c-d26afa6ec57b" />
+  <img src="Images/9.jpg">
 
 </p>
 <br>
