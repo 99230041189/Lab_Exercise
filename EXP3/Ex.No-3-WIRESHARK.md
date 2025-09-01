@@ -12,7 +12,7 @@
   <br>
    <br>
   <p align="center">
-  <img width="1155" height="688" alt="image" src="https://github.com/user-attachments/assets/28b8635a-a3d2-4efc-9ed4-ab4b39f96ce5" />
+  <img src="Images/1.jpg" />
 
   </p>
   <br>
@@ -22,7 +22,7 @@
  <br>
    <br>
   <p align="center">
-  <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/fe34867f-be37-49ee-b73d-c87bc3f51c76" />
+  <img src="Images/2.jpg" />
  </p>
   <br>
   <br>
@@ -32,17 +32,17 @@
 
 - Enter any dummy credentials. For this example, we'll use:
 
-   Username: darling
+   Username: Venkki
 
-   Password: measatest143
+   Password: abc123
 
 - Click the login button. The login will fail, but the data has already been sent across the network.
 
  <br>
    <br>
   <p align="center">
-<img width="1916" height="905" alt="image" src="https://github.com/user-attachments/assets/bf27fed5-fe0c-47d5-91e2-f4e7dbea9685" />
-
+<img src="Images/3.jpg" />
+    
  </p>
   
   
@@ -57,8 +57,8 @@
  <br>
    <br>
   <p align="center">
-<img width="1919" height="517" alt="image" src="https://github.com/user-attachments/assets/24898bfb-4f11-4c3c-83aa-ac994cb3fdde" />
-
+<img src="Images/4.jpg" />
+    
  </p>
   <br>
   <br>
@@ -78,8 +78,8 @@ HTML Form URL Encoded
  <br>
    <br>
   <p align="center">
-  <img width="921" height="561" alt="image" src="https://github.com/user-attachments/assets/b4403935-01b3-4678-81c9-bd1ad67c05bf" />
- </p>
+<img src="Images/5.jpg" /> </p>
+
   <br>
   <br>
 
@@ -89,3 +89,4 @@ HTML Form URL Encoded
 The experiment successfully intercepts the login credentials in a human-readable format. The analysis of the captured POST packet reveals the plaintext data that was transmitted over the network:
 
 This result confirms the inherent security flaw of the HTTP protocol. Any sensitive data sent over HTTP is transmitted openly, making it trivial to intercept.
+
