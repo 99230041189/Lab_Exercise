@@ -58,7 +58,7 @@ Acquiring volatile memory using FTK Imager
 > Open FTK Imager and navigate to the volatile memory icon (capture
 > memory).
 
-![Image 1](images/image_1.jpg)
+![Image 1](Images/1.jpg)
 
 ![Image 2](images/image_2.jpg)
 
