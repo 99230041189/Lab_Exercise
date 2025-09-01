@@ -1,219 +1,206 @@
-# Digital Forensics Lab Experiment
+# Ex.No.1    FTK Imager: A Forensic Imaging Tool Overview
 
-## Experiment No. 1: Evidence Acquisition Using AccessData FTK Imager
+## Acquiring Volatile Memory (RAM) Using FTK Imager
+<br>
 
-### Date:
-*Enter the date of the experiment here*
 
----
+### Steps to Capture RAM Using FTK Imager
+<br>
 
-### Objective
-To understand and perform evidence acquisition using FTK Imager by capturing both volatile and non-volatile memory.
-
----
-
-### Description
-> **Ex. No 1: Evidence Acquisition Using AccessData FTK Imager**
-
-**Date**:
-
-**Description**
-
-> Forensic Toolkit or FTK is a computer forensics software product made
-> by AccessData. This is a Windows based commercial product. For
-> forensic investigations, the same development team has created a free
-> version of the commercial product with fewer functionalities. This FTK
-> Imager tool is capable of both acquiring and analyzing computer
-> forensic evidence.
->
-> The evidence FTK Imager can acquire can be split into two main parts.
-> They are:
-
--   Acquiring volatile memory
-
--   Acquiring non-volatile memory (Hard disk)
-
-> There are two possible ways this tool can be used in forensics image
-> acquisitions:
-
--   Using FTK Imager portable version in a USB pen drive or HDD and
-    > opening it directly from the evidence machine. This option is most
-    > frequently used in live data acquisition where the evidence
-    > PC/laptop is switched on.
-
--   Installing FTK Imager on the investigator's laptop.
-
-> In this case the source disk should be mounted into the investigator's
-> laptop via write blocker. The write blocker prevents data being
-> modified in the evidence source disk while providing read-only access
-> to the investigator's laptop. This helps to maintain the integrity of
-> the source disk.
-
-Acquiring volatile memory using FTK Imager
-
-> The FTK Imager tool helps investigators to collect the complete
-> volatile memory (RAM) of a computer. The following steps will show you
-> how to do this.
->
-> Open FTK Imager and navigate to the volatile memory icon (capture
-> memory).
+### 1. Run as Administrator
+- Open **FTK Imager** with administrative privileges.  
+- Right-click the FTK Imager icon and select **Run as administrator**.
+<br>
+<br>
 
 ![Image 1](Images/1.jpg)
 
+ 
+<br>
+<br>
 
-> **NOTE:** This tool provides options to include pagefile and AD1 files
-> when acquiring the volatile memory.
->
-> **Pagefile:** The pagefile (pagefile.sys) is used in Windows operating
-> systems as volatile memory due to limitation of physical random-access
-> memory (RAM). It is located under the "C" partition ready to use as
-> volatile memory when the existing RAM capacity is exceeded. So this
-> file can have quite a bit of valuable data when considering the
-> volatile memory. Therefore, it is recommended to capture and collect
-> this file in the acquisition.
->
-> **AD1 file:** AD1 is the FTK imager image file. The investigator has
-> the option to create an AD1 file for later use.
->
-> Clicking the "capture memory" button will start acquiring the volatile
-> memory.
+### 2. Initiate Memory Capture
+- In the top menu bar, click **File → Capture Memory...** from the dropdown list.
+  <br>
+<br>
 
-![Image 1](Images/2.jpg)
+  <img width="1919" height="1016" alt="Screenshot 2025-08-30 113433" src="https://github.com/user-attachments/assets/eaa20cad-34e6-4b5b-91cc-26b38932d100" />
 
-> NOTE: Once the acquisition has completed, the destination folder will
-> have the acquired memory with the file extension of ".mem".
->
-Acquiring non-volatile memory (Disk Image) using FTK Imager
->
-> As previously stated, this same tool can be used to collect a disk
-> image as well. Open FTK Imager and navigate to "Create Disk
-> Image".![Image 1](Images/3.jpg)
+<br>
+<br>
 
->
-> Now select the source that you need to acquire.
+### 3. Configure Destination
+A dialog box will appear where you configure where and how the memory will be saved.
 
-![Image 1](Images/4.jpg)
+- **Destination Path:**  
+  Click **Browse** to select a folder on an **external drive** (not the system drive).  
+
+- **Destination Filename:**  
+  You can keep the default `memdump.mem` or assign a more descriptive name.
+
+- **Optional: Include pagefile.sys**  
+  Check this box to capture `pagefile.sys`, which is virtual memory stored on the disk.  
+  > Note: This may increase capture size and duration, but can contain valuable artifacts.
+
+- **Optional: Create AD1 file**  
+  Saves the memory dump in an AccessData-specific container file.  
+  > Generally not necessary if using tools like **Volatility** for analysis.
 
 
-> NOTE: FTK Imager is capable of acquiring physical drives (physical
-> hard drives), logical drives (partitions), image files, contents of a
-> folder, or CDs/DVDs. Investigators can connect external HDDs into the
-> collection computer
->
-> via write blocker and use the "logical drive" option to select the
-> mounted HDD as a partition. Collecting Physical Drives
->
-> Select the "Physical Drive" option.
->
-> Select the drive you need to acquire and click "Finish".
 
-![Image 1](Images/1.jpg)
+<br>
+<br>
 
-> Raw (dd): This is the image format most commonly used by modern
-> analysis tools. These raw file formatted images do not contain
-> headers, metadata, or magic values. The raw format typically includes
-> padding for any memory ranges that were intentionally skipped (i.e.,
-> device memory) or that could not be read by the acquisition tool,
-> which helps maintain spatial integrity (relative offsets among data).
->
-> SMART: This file format is designed for Linux file systems. This
-> format keeps the disk images as pure bitstreams with optional
-> compression. The file consists of a standard 13-byte header followed
-> by a series of sections. Each section includes its type string, a
-> 64-bit offset to the next section, its 64-bit size, padding, and a
-> CRC, in addition to actual data or comments, if applicable.
->
-> E01: this format is a proprietary format developed by Guidance
-> Software's EnCase. This format compresses the image file. An image
-> with this format starts with case information in the header and
-> footer, which contains an MD5 hash of the entire bit stream. This case
-> information contains the date and time of acquisition, examiner's
-> name, special notes and an optional password.
->
-> AFF: Advance Forensic Format (AFF) was developed by Simson Garfinkel
-> and Basis Technology. Its latest implementation is AFF4. The goal is
-> to create a disk image format that does not lock the user into a
-> proprietary format that may prevent them from being able to properly
-> analyze it.
->
-> Now enter the case details.
->
-![Image 1](Images/1.jpg)
->
-> Add an image destination (where the image file will be saved), image
-> file name and fragment size.
+<img width="1089" height="733" alt="image" src="https://github.com/user-attachments/assets/063d0880-5649-46b7-aa7f-49d958acf63b" />
 
-![Image 1](Images/1.jpg)
+ 
+<br>
+<br>
 
-> Image Fragment Size (MB): this option will separate the image file
-> into multiple images and save them in the same destination. If you
-> need only one file instead of creating multiple fragmented images, you
-> must set the image fragment size to "0".
->
-> Select the "verify images after they are created" option. This will
-> verify the hash values once the image has created. In order to ensure
-> integrity, it is recommended to use this option. However, this will
-> increase the time taken to acquire your evidence, especially if you're
-> dealing with a large disk image size.
->
-![Image 1](Images/1.jpg)
->
-> Click "start" to start
-![Image 1](Images/1.jpg)
->
-> Once acquiring is complete, it will create a text file including all
-> the information it has acquired.
->
-![Image 1](Images/1.jpg)
->
-![Image 1](Images/1.jpg)
->
-> Hash values are matched.
+### 4. Start Capture
+- Click the **Capture Memory** button to begin acquisition.
+<br>
+<br>
 
+
+<img width="1090" height="732" alt="image" src="https://github.com/user-attachments/assets/73069610-1704-424b-a0bb-c74981d19b02" />
+
+<br>
+<br>
+
+### 5. Wait for Completion
+- A progress bar will indicate the capture status.  
+- Capture time depends on the system’s RAM size.  
+- Once finished, the memory dump file will be available in the destination folder.
+---
+<br>
+<br>
+
+## Acquiring Non-Volatile Memory (Disk Image) Using FTK Imager
+
+
+### 1. Start the Process
+- In FTK Imager, go to the top menu bar: **File → Create Disk Image...**.
+
+<br>
+<br>
+<img width="1919" height="1016" alt="Screenshot 2025-08-30 113433" src="https://github.com/user-attachments/assets/40754729-cce8-4187-8b13-de7e0c138b26" />
+
+
+<br>
+<br>
+
+### 2. Select Source Evidence Type
+A window will appear asking you to choose the source type:
+
+- **Physical Drive:** Images the entire disk, including all partitions, unallocated space, and the Master Boot Record (MBR).  
+- **Logical Drive:** Images a specific partition (e.g., C: drive).  
+- **Image File:** Converts or copies an existing image file.  
+- **Contents of a Folder:** Creates an image of a specific folder only.  
+
+> **Tip:** For full forensic imaging, select **Physical Drive**.
+<br>
+<br>
+<p align="center">
+
+<img width="1089" height="735" alt="image" src="https://github.com/user-attachments/assets/c5d507fb-7bfc-42d3-9c8f-c766fdd68589" />
+
+</p>
+<br>
+<br>
+
+### 3. Select the Source Drive
+- From the dropdown, choose the physical drive to image (connected via **write-blocker**).  
+- Click **Finish**.
+ <br>
+<br>
+<p align="center">
+<img width="1089" height="731" alt="image" src="https://github.com/user-attachments/assets/c1a86dc8-d8c9-4d96-8622-691a6bcd8368" />
+
+</p>
+<br>
+<br>
+
+### 4. Configure the Image Destination
+- Click **Add...** in the "Create Image" window to define the image **format** and **destination**.
+  <br>
+<br>
+<p align="center">
+<img width="1084" height="735" alt="image" src="https://github.com/user-attachments/assets/7871caad-5c0e-45b4-b186-1b3383ffdb73" />
+
+<br>
+
+#### Options:
+
+- **Image Type:**  
+  - **E01 (EnCase Format):** Recommended; includes compression, metadata, and error-checking.  
+  - **Raw (DD):** Bit-for-bit copy with no extra features.
+<br>
+<br>
+<p align="center">
+<img width="1091" height="735" alt="image" src="https://github.com/user-attachments/assets/11927a3a-6d4b-4017-be40-1cbbfc38800a" />
+
+</p>
+<br>
+<br>
+
+- **Fill in Evidence Item Information:**  
+  - Enter case details, examiner name, and description.  
+  - This information is stored in the image metadata (important for documentation).
+ <p align="center">
+<img width="1088" height="741" alt="image" src="https://github.com/user-attachments/assets/ebaa67c1-e547-4cd0-9192-15df051cf0ed" />
+
+</p>
+<br>
+<br>
+
+- **Choose Destination Folder:**  
+  - Must be a different drive from the source.  
+  - Name the image file (e.g., `Case001_SuspectHDD`).  
+
+- **Image Fragment Size:**  
+  - Set a value to split the image into multiple parts.  
+  - Set to `0` for a single image file.
+  <br>
+  <br>
+  
+<p align="center">
+<img width="1090" height="738" alt="image" src="https://github.com/user-attachments/assets/15e6e39a-3dec-44c7-a20d-e059c6dade7b" />
+</p>
+<br>
+<br>
+
+
+### 5. Start the Imaging Process
+- Click **Finish** to return to the "Create Image" screen.  
+- **Check "Verify images after they are created"** to calculate hash values and ensure integrity.  
+- Click **Start**.
+  <br>
+  <br>
+  <p align="center">
+ <img width="1088" height="734" alt="image" src="https://github.com/user-attachments/assets/14975271-7978-410f-b4f4-f2a63c328048" />
+
+  <img width="1093" height="733" alt="image" src="https://github.com/user-attachments/assets/944f873f-a792-48ff-884c-d26afa6ec57b" />
+
+</p>
+<br>
+<br>
+
+### 6. Completion and Hash Verification
+- The imaging process may take time depending on the drive size.  
+- After completion, FTK Imager verifies the hashes automatically.  
+- A final window shows **MD5** and **SHA1** hashes for both the source drive and image.  
+- Matching hashes confirm the forensic image’s integrity.
 
 ---
+## Notes
 
-### Materials Required
-- AccessData FTK Imager (Portable or Installed)
-- USB Pen Drive or External HDD (for portable version)
-- Investigator’s Laptop
-- Write Blocker
-
+- Always use a **write-blocker** to prevent modifications to the evidence.  
+- **Hash verification** is critical to maintain a chain of custody and admissibility in court.  
+- **Image Fragmentation** is useful for large drives or storage limitations.
 ---
 
-### Procedure
+## References
 
-1. **Acquiring Volatile Memory:**
-   - Open FTK Imager and navigate to the volatile memory capture option.
-   - (Insert screenshot here: `![Volatile Memory Capture](images/volatile-memory.png)`)
-   - Select options to include pagefile and AD1 files if needed.
-   - Click **Capture Memory** and wait until acquisition is completed.
-
-2. **Acquiring Non-Volatile Memory:**
-   - Open FTK Imager and select **Create Disk Image**.
-   - Choose the source (physical drive, logical drive, image file, or folder).
-   - Enter case details and select the image format (Raw, SMART, E01, or AFF).
-   - Specify destination, filename, and fragment size.
-   - Enable **Verify images after they are created** for integrity checking.
-   - Click **Start** to begin acquisition.
-
----
-
-### Observations
-*Record your observations here, such as hash verification results or acquisition logs.*
-
----
-
-### Result
-Evidence acquisition was successfully performed using FTK Imager for both volatile and non-volatile memory.
-
----
-
-### Conclusion
-This lab demonstrated the process of forensic image acquisition while maintaining data integrity using write blockers and proper hashing techniques.
-
----
-
-### References
-- AccessData FTK Imager User Documentation
-- Digital Forensics Best Practices
+- [FTK Imager Official Website](https://accessdata.com/product-download/ftk-imager-version-4-5)  
+- FTK Imager Documentation
