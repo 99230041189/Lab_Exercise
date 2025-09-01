@@ -148,7 +148,8 @@ A window will appear asking you to choose the source type:
   - Enter case details, examiner name, and description.  
   - This information is stored in the image metadata (important for documentation).
  <p align="center">
-<img width="1088" height="741" alt="image" src="https://github.com/user-attachments/assets/ebaa67c1-e547-4cd0-9192-15df051cf0ed" />
+<img src="Images/6.jpg">
+
 
 </p>
 <br>
