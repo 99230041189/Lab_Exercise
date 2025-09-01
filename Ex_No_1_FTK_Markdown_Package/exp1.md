@@ -60,7 +60,6 @@ Acquiring volatile memory using FTK Imager
 
 ![Image 1](Images/1.jpg)
 
-![Image 2](images/image_2.jpg)
 
 > **NOTE:** This tool provides options to include pagefile and AD1 files
 > when acquiring the volatile memory.
@@ -79,7 +78,7 @@ Acquiring volatile memory using FTK Imager
 > Clicking the "capture memory" button will start acquiring the volatile
 > memory.
 
-![](media/image5.jpg){width="3.3075in" height="1.59in"}
+![Image 1](Images/1.jpg)
 
 > NOTE: Once the acquisition has completed, the destination folder will
 > have the acquired memory with the file extension of ".mem".
@@ -88,13 +87,13 @@ Acquiring volatile memory using FTK Imager
 >
 > As previously stated, this same tool can be used to collect a disk
 > image as well. Open FTK Imager and navigate to "Create Disk
-> Image".![](media/image2.jpg){width="4.848797025371828in"
-> height="0.8016666666666666in"}
+> Image".![Image 1](Images/1.jpg)
+
 >
 > Now select the source that you need to acquire.
 
-![](media/image1.jpg){width="2.806963035870516in"
-height="2.2354155730533685in"}
+![Image 1](Images/1.jpg)
+
 
 > NOTE: FTK Imager is capable of acquiring physical drives (physical
 > hard drives), logical drives (partitions), image files, contents of a
@@ -108,7 +107,7 @@ height="2.2354155730533685in"}
 >
 > Select the drive you need to acquire and click "Finish".
 
-![](media/image8.jpg){width="3.238124453193351in" height="2.57125in"}
+![Image 1](Images/1.jpg)
 
 > Raw (dd): This is the image format most commonly used by modern
 > analysis tools. These raw file formatted images do not contain
@@ -139,13 +138,12 @@ height="2.2354155730533685in"}
 >
 > Now enter the case details.
 >
-> ![](media/image6.jpg){width="2.9031233595800523in"
-> height="2.596874453193351in"}
+![Image 1](Images/1.jpg)
 >
 > Add an image destination (where the image file will be saved), image
 > file name and fragment size.
 
-![](media/image10.jpg){width="2.809374453193351in" height="2.50125in"}
+![Image 1](Images/1.jpg)
 
 > Image Fragment Size (MB): this option will separate the image file
 > into multiple images and save them in the same destination. If you
@@ -158,21 +156,17 @@ height="2.2354155730533685in"}
 > increase the time taken to acquire your evidence, especially if you're
 > dealing with a large disk image size.
 >
-> ![](media/image7.jpg){width="2.4864577865266844in"
-> height="2.2421872265966756in"}
+![Image 1](Images/1.jpg)
 >
 > Click "start" to start
-> acquiring.![](media/image11.jpg){width="2.687501093613298in"
-> height="1.93125in"}
+![Image 1](Images/1.jpg)
 >
 > Once acquiring is complete, it will create a text file including all
 > the information it has acquired.
 >
-> ![](media/image9.png){width="3.9642443132108487in"
-> height="1.57917760279965in"}
+![Image 1](Images/1.jpg)
 >
-> ![](media/image4.png){width="4.568501749781277in"
-> height="2.488244750656168in"}
+![Image 1](Images/1.jpg)
 >
 > Hash values are matched.
 
