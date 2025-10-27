@@ -21,8 +21,7 @@ Windows: Download the executable from the official CGSecurity website.
 <br>
 <br>
 <p align="center">
-<img width="1106" height="635" alt="image" src="https://github.com/user-attachments/assets/e8a9203d-b855-436d-93b1-acc965956c93" />
-
+<img src="Images/Screenshot 2025-10-27 215526.png" />
 </p>
 <br>
 <br>
@@ -35,8 +34,8 @@ Windows: Download the executable from the official CGSecurity website.
 <br>
 <br>
 <p align="center">
-<img width="1098" height="635" alt="image" src="https://github.com/user-attachments/assets/ab73948e-e51b-40e4-8ee7-018213426f0e" />
-
+<img src="Images/Screenshot 2025-10-27 215655.png" />
+  
 </p>
 <br>
 <br>
@@ -50,8 +49,7 @@ Windows: Download the executable from the official CGSecurity website.
 <br>
 <br>
 <p align="center">
-<img width="1097" height="644" alt="image" src="https://github.com/user-attachments/assets/3c4156ec-95bc-400e-8bfb-8bfcf0d1955c" />
-
+<img src="Images/Screenshot 2025-10-27 220844.png" />
 </p>
 <br>
 <br>
@@ -61,8 +59,7 @@ Windows: Download the executable from the official CGSecurity website.
 <br>
 <br>
 <p align="center">
-<img width="1103" height="633" alt="image" src="https://github.com/user-attachments/assets/6533e8ad-c50d-4d0e-85df-ed8d363c0218" />
-
+<img src="Images/Screenshot 2025-10-27 221444.png" />
 </p>
 <br>
 <br>
@@ -75,7 +72,8 @@ Windows: Download the executable from the official CGSecurity website.
 <br>
 <br>
 <p align="center">
-<img width="1098" height="637" alt="image" src="https://github.com/user-attachments/assets/c4d01faa-441c-4789-93d7-c8ac5b6ec88b" />
+<img src="Images/Screenshot 2025-10-27 221955.png" />
+  
 </p>
 <br>
 <br>
@@ -92,8 +90,9 @@ Windows: Download the executable from the official CGSecurity website.
 -<br>
 <br>
 <p align="center"> 
-<img width="1099" height="637" alt="image" src="https://github.com/user-attachments/assets/5f7a6814-4f1d-425a-bd40-579ebc1a9671" />
-
+<img src="Images/Screenshot 2025-10-27 222143.png" />
+<img src="Images/Screenshot 2025-10-27 222202.png" />
+  
 </p>
 <br>
 <br>
@@ -114,8 +113,8 @@ Windows: Download the executable from the official CGSecurity website.
     <br>
 <br>
 <p align="center">
-<img width="1100" height="638" alt="image" src="https://github.com/user-attachments/assets/bec038c0-7c0d-4e7c-a0a0-84dbeee45bae" />
-
+<img src="Images/Screenshot 2025-10-27 221444.png" />
+  
 </p>
 <br>
 <br>
@@ -128,8 +127,8 @@ Windows: Download the executable from the official CGSecurity website.
 <br>
 <br>
 <p align="center">
-<img width="1089" height="643" alt="image" src="https://github.com/user-attachments/assets/0c163668-bbd8-4220-a926-8255f93e49a0" />
-
+<img src="Images/Screenshot 2025-10-27 222143.png" />
+  
 <br>
 <br>
 
@@ -138,8 +137,8 @@ Windows: Download the executable from the official CGSecurity website.
 <br>
 <br>
 <p align="center">
-  <img width="1101" height="637" alt="image" src="https://github.com/user-attachments/assets/bfcaefe2-abce-44ee-b6e6-b9e9fd25bcc4" />
-
+<img src="Images/Screenshot 2025-10-27 223132.png" />
+  
 </p>
 <br>
 <br>
@@ -162,3 +161,4 @@ Windows: Download the executable from the official CGSecurity website.
 - Once your task is complete, select [Quit] to exit the program.
 
 - If you wrote a new partition table to the drive, it is recommended to restart your computer to allow the operating system to recognize the changes.
+
