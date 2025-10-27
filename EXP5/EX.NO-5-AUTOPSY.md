@@ -21,8 +21,7 @@ Autopsy is an open-source digital forensics platform used for analyzing and extr
     
        <br>
        
-      <img width="990" height="589" alt="image" src="https://github.com/user-attachments/assets/4a9dca99-b53c-4679-8df4-ec1bf57c8440" />
-
+      <img src="images/Screenshot 2025-10-27 185358.png" />
      <br>
 
 ### 3. Adding a Data Source
@@ -32,8 +31,9 @@ Autopsy is an open-source digital forensics platform used for analyzing and extr
 - Start Analysis
  <br>
 
-  <img width="1712" height="908" alt="image" src="https://github.com/user-attachments/assets/c089b4ae-c7a8-4126-ad31-af70372acb72" />
-
+  <img src="images/Screenshot 2025-10-27 185741.png" />
+  <img src="images/Screenshot 2025-10-27 190243.png" />
+  <img src="images/Screenshot 2025-10-27 190412.png" />
 <br>
  <br>
  
@@ -43,7 +43,7 @@ Autopsy is an open-source digital forensics platform used for analyzing and extr
 - Use the Tree Viewer
 
 <br>
-<img width="1918" height="1027" alt="Screenshot 2025-09-02 124232" src="https://github.com/user-attachments/assets/96c97853-49d1-4bc7-a578-470f1e618d22" />
+<img src="images/Screenshot 2025-10-27 190440.png" />
 
 <br>
 <br>
@@ -95,4 +95,5 @@ Autopsy is an open-source digital forensics platform used for analyzing and extr
   - Once you have completed your investigation, close the case within Autopsy.
 - Archiving:
   - Ensure all data and reports are properly archived according to your organization's policies.
+
 
