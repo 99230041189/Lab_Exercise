@@ -64,8 +64,7 @@ Autopsy is an open-source digital forensics platform used for analyzing and extr
 - Hash Analysis:
   - Compare file hashes with known databases to identify known good or bad files.
     <br>
-<img width="1918" height="1022" alt="Screenshot 2025-09-02 124528" src="https://github.com/user-attachments/assets/7e7676f4-73a0-419c-94a0-d7cbeea9cf4e" />
-
+<img src="images/Screenshot 2025-10-27 205319.png" />
 
 <br>
 <br>
@@ -76,7 +75,7 @@ Autopsy is an open-source digital forensics platform used for analyzing and extr
  - After analyzing the data, click on Generate Report from the toolbar.
 
 <p align="center">
- <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/1f8a73c6-1773-4fb6-ae4a-111d8ffbd0fe" />
+     <img src="images/Screenshot 2025-10-27 205426.png" />
 </p>
 
 <p align="center">
@@ -86,8 +85,7 @@ Autopsy is an open-source digital forensics platform used for analyzing and extr
 -  *Report*
 
 <br>
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/f9d90db8-78d2-40ad-b0fc-45d5acbc21e6" />
-
+<img src="images/Screenshot 2025-10-27 205438.png" />
 <br>
 
 ### 7. Case Closure
@@ -95,5 +93,6 @@ Autopsy is an open-source digital forensics platform used for analyzing and extr
   - Once you have completed your investigation, close the case within Autopsy.
 - Archiving:
   - Ensure all data and reports are properly archived according to your organization's policies.
+
 
 
