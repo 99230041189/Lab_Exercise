@@ -1,106 +1,133 @@
-# Ex.No. 8: Use Steg-Expose to Detect Hidden Data in Images
+## Experiment No - 06: Use Sleuth Kit to Analyze Digital Evidence
 
-**Course / Lab:** Digital Forensics Lab
-**Experiment No.:** 8
-**Title:** Use Steg-Expose to Detect Hidden Data in Images
-
----
-
-## Description
-**StegExpose** is a specialized tool used for **steganography analysis**. It works by evaluating the **statistical properties** of an image to estimate the probability of hidden data being embedded within it. This process helps forensic investigators detect steganography techniques like Least Significant Bit (LSB) embedding.
+### Description
+The **Sleuth Kit (TSK)** is a suite of command-line tools for analyzing disk images and recovering digital evidence. This guide outlines the steps to use TSK on a Windows machine for digital forensics.
 
 ---
 
-## Prerequisites
+### Step 1: Install Sleuth Kit
 
-- **Java Runtime Environment (JRE):** StegExpose is a Java-based application and requires JRE to run.
-- **StegExpose Tool:** Download the latest `.jar` file from the official StegExpose GitHub repository.
+1.  **Download Sleuth Kit:**
+    * Visit the official Sleuth Kit website or the provided Google Drive link (https://drive.google.com/drive/u/1/folders/1ilSFY7Tqn2L7AjQGhq8yJ8kixc_xTU-v) and download the latest Windows version.
+2.  **Install Sleuth Kit:**
+    * Run the installer and follow the instructions to install Sleuth Kit on your Windows machine.
 
 ---
 
-## Step-by-Step Process
+### Step 2: Acquire the Disk Image
 
-### 1. Download and Set Up StegExpose
+Before analysis, a **bit-by-bit copy** (disk image) of the storage device evidence is required.
 
-1.  **Download the tool:** Obtain the `StegExpose.jar` file from the GitHub repository.
-2.  **Install Java:** Ensure JRE is installed on your machine.
-3.  **Prepare environment:** Place the `StegExpose.jar` file in a dedicated working folder.
+1.  **Create Disk Image:**
+    * Use a forensic tool like **FTK Imager** or **dd** to create a bit-by-bit copy.
+    * Ensure the image is in a TSK-supported format, such as **.dd**, **.raw**, **.img**, or **.E01**.
+2.  **Download Files (for this exercise):**
+    * Download the following files from the Google Drive:
+        * `4Dell Latitude CPi.E01`
+        * `4Dell Latitude CPi.E02`
 
-![images/exp1-disk-step1.png](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/918625ec1e528d3a2721668acf6474e8c581c12a/images/8.1.png)
+---
 
-### 2. Select Images for Analysis
+### Step 3: Mount the Disk Image (Optional)
 
-* Collect the images you suspect might contain hidden data.
-* StegExpose supports common image formats such as **.png**, **.jpg**, and **.bmp**.
+Mounting the disk image simplifies the navigation and analysis of the file system.
 
-![images/exp1-disk-step1.png](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/918625ec1e528d3a2721668acf6474e8c581c12a/images/8.6.png)
+1.  **Mount the Image:**
+    * Use a tool like **OSFMount** to mount the image as a virtual drive on your Windows system.
+    * *Note: This step is optional but can aid in easy file system navigation.*
 
-### 3. Open Command Line or Terminal
+---
 
-* Navigate to the folder where the `StegExpose.jar` file is located using your Command Prompt (Windows) or Terminal (Linux/macOS).
+### Step 4: Analyze the File System
 
-![images/exp1-disk-step1.png](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/918625ec1e528d3a2721668acf6474e8c581c12a/images/8.8.png)
+Use the Sleuth Kit command-line tools to examine the file system structure and locate evidence.
 
+1.  **Navigate to the Sleuth Kit Directory:**
+    * Open the **Command Prompt** (cmd) and use the `cd` command to navigate to the directory where Sleuth Kit is installed (e.g., `C:\Program Files\SleuthKit\bin`).
 
-### 4. Run StegExpose on an Image
+2.  **Identify File System Type with `fsstat`:**
+    * **Command:**
+        ```arduino
+        fsstat [image file] > filesystem_info.txt
+        ```
+    * **Purpose:** This command outputs detailed information about the file system, which is crucial for structural understanding.
 
-* Use the following command structure to analyze a single image for hidden data:
+3.  **List Partitions with `mmls`:**
+    * **Command:**
+        ```arduino
+        mmls [image file] > partitions.txt
+        ```
+    * **Purpose:** This command lists the partitions present within the image file.
 
-    **Command Structure:**
-    ```bash
-    java -jar StegExpose.jar <image_file_path>
-    ```
+4.  **Analyze File System with `fls`:**
+    * **Command:**
+        ```arduino
+        fls -r [image file] > file_list.txt
+        ```
+    * **Purpose:** The `-r` flag recursively lists files and directories in the file system, along with their metadata (inode numbers).
 
-    **Example:**
-    ```bash
-    java -jar StegExpose.jar test_image.png
-    ```
+5.  **Recover Deleted Files with `icat`:**
+    * **Command:**
+        ```css
+        icat [image file] [inode number] > [output file]
+        ```
+    * **Purpose:** To extract a specific file, replace `[inode number]` with the inode found from the `fls` output.
 
-### 5. Analyze the Output
+---
 
-* StegExpose calculates a **"suspect" score** ranging from 0 to 1. **The higher the score, the more likely steganography is present.**
+### Step 5: Analyze Metadata
 
-| Score Range | Interpretation (Suggested Thresholds) |
-| :---: | :--- |
-| **Less than 0.2** | Image is considered **clean** (no hidden data detected). |
-| **0.2 - 0.3** | **Possibly** some hidden data is present. |
-| **Above 0.3** | **Likely** that steganography is present. |
+Extract file metadata to gain insight into a file's history, creation, and usage.
 
-* **Example Output Analysis:**
-    ```bash
-    java -jar StegExpose.jar suspect_image.png
-    ```
-    ```makefile
-    Analyzing suspect_image.png...
-    Result: 0.4
-    Steganography likely present
-    ```
-  ![images/exp1-disk-step1.png](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/918625ec1e528d3a2721668acf6474e8c581c12a/images/8.10.png)
-  
-  ![images/exp1-disk-step1.png](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/918625ec1e528d3a2721668acf6474e8c581c12a/images/8.11.png)
+1.  **View Metadata with `istat`:**
+    * **Command:**
+        ```css
+        istat [image file] [inode number] > metadata_info.txt
+        ```
+    * **Purpose:** Provides detailed information about a file, including **timestamps (MAC times)**, size, and allocation status.
 
-### 6. Batch Analysis (Multiple Images)
+---
 
-* To check multiple images at once, specify the folder path containing the images:
+### Step 6: Timeline Analysis (Optional)
 
-    **Command Structure:**
-    ```bash
-    java -jar StegExpose.jar <folder_path>
-    ```
+Creating a timeline of file activity is vital for reconstructing events.
 
-### 7. Advanced Options (Optional)
+1.  **Generate a Body File using `fls`:**
+    * **Command:**
+        ```css
+        fls -m / -r [image file] > body.txt
+        ```
+    * **Purpose:** Generates a **body file** (`body.txt`) containing the essential metadata (MAC times, file paths) needed for timeline analysis.
 
-* To view additional parameters, such as options for adjusting detection sensitivity or output verbosity, use the `--help` flag:
+2.  **Create Timeline with `mactime`:**
+    * **Command:**
+        ```css
+        mactime -b body.txt > timeline.txt
+        ```
+    * **Purpose:** Processes the body file to create a **timeline** (`timeline.txt`) sorted by the Modified, Accessed, and Changed (MAC) times of the files.
 
-    **Command:**
-    ```bash
-    java -jar StegExpose.jar --help
-    ```
+---
 
-### 8. Review the Results
+### Step 7: Generate a Report
 
-* Review the scores generated for each image and use the threshold values to determine which images require further forensic investigation to extract the suspected hidden data.
+Document the findings by compiling all the collected data into a comprehensive report.
 
-**Result:**
+1.  **Compile the Data:**
+    * Gather all the output files (e.g., `filesystem_info.txt`, `partitions.txt`, `file_list.txt`, `metadata_info.txt`, `timeline.txt`).
+2.  **Analyze and Document:**
+    * Review the findings, highlight crucial evidence, and write a report summarizing the investigation's methodology and results.
 
-The hidden data within the image was successfully detected using StegExpose. The analysis revealed that images with a suspect score above the threshold likely contain embedded steganographic content, confirming the tool’s effectiveness in steganography detection.
+---
+
+### Step 8: Finalize and Store Evidence
+
+Ensure all evidence and reports are securely managed to maintain integrity and follow the chain of custody.
+
+1.  **Archive Evidence:**
+    * Use a secure, verifiable method to **archive** the original disk image and the analysis results.
+2.  **Store Securely:**
+    * Store the archived data in a secure location, strictly adhering to the **chain of custody** procedures.
+
+**Result**
+
+The Sleuth Kit experiment successfully analyzed the provided .E01 disk image — partitions and file system structure were identified, deleted files were recovered (using fls/icat), and detailed file metadata was extracted (fsstat/istat). A timeline was generated with mactime to reconstruct file activity, and all outputs were archived with hashes to preserve evidence integrity.
