@@ -50,7 +50,7 @@ To investigate potentially harmful processes:
    Right-click → **Properties** → **TCP/IP** tab. Unexpected external connections require attention. 🌐
 
 ---
-![WhatsApp Image 2025-10-27 at 10 12 55_7027eb25](https://github.com/srihari2082005-ctrl/img-1/blob/88bdf1361c76389b4ae9c42336db2e8ea1f7a066/Screenshot%202025-10-27%20185345.png)
+   <img src="Images/Screenshot 2025-10-28 111828.png" />
 
 
 ### Step 4: Research Suspicious Processes 🔎
@@ -59,7 +59,8 @@ To investigate potentially harmful processes:
 * Use databases like **VirusTotal** or **ProcessLibrary** to check for known malware. 🦠
 
 
-![WhatsApp Image 2025-10-27 at 10 15 25_99e8d11e](https://github.com/srihari2082005-ctrl/img-1/blob/88bdf1361c76389b4ae9c42336db2e8ea1f7a066/Screenshot%202025-10-27%20185345.png)
+   <img src="Images/Screenshot 2025-10-28 112344.png" />
+
 
 ---
 
@@ -70,7 +71,8 @@ To investigate potentially harmful processes:
 * **Delete Source:** Locate the executable via its Path and remove it if confirmed malicious. 🗑️
 
 ---
-![WhatsApp Image 2025-10-27 at 10 15 41_cffdd1c3](https://github.com/srihari2082005-ctrl/img-1/blob/24f360e7a9c3a43f5c24a2ec60c4aba8dcb29191/Screenshot%202025-10-27%20190054.png)
+   <img src="Images/Screenshot 2025-10-28 112252.png" />
+
 
 
 ---
@@ -78,4 +80,5 @@ To investigate potentially harmful processes:
 ### Step 6: Conduct a Full System Scan 🧹
 
 * Run a comprehensive antivirus scan. 🛡️  
+
 * Use malware removal tools (e.g., Malwarebytes or Windows Defender) for a thorough cleanup. 🧰
